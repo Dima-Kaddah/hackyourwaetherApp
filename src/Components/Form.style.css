@@ -1,0 +1,40 @@
+.formContainer {
+  width: 30%;
+  margin: auto;
+}
+
+.formStyle {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: space-evenly;
+}
+
+input,
+button {
+  height: 40px;
+}
+
+input {
+  border-radius: 15px;
+  width: 250px;
+  border: black;
+  font-size: large;
+}
+
+button {
+  font-size: large;
+  border-radius: 10px;
+  border: black;
+}
+
+input:focus,
+textarea,
+button:focus {
+  outline: none;
+}
+
+button:active {
+  color: azure;
+  background-color: rgb(103, 103, 152);
+}

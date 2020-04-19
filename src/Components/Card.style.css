@@ -1,0 +1,45 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding-top: 30px;
+}
+
+.card {
+  padding: 20px;
+  margin: 10px;
+  position: relative;
+  width: 400px;
+  height: 350px;
+  overflow: hidden;
+}
+
+h3 {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: space-around;
+}
+
+.bigFont {
+  font-size: 40px;
+}
+
+img {
+  border: 3px solid #ccc;
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0.3;
+  width: 400px;
+  height: 350px;
+}
+
+.err {
+  display: block;
+  background-color: brown;
+  width: 400px;
+  height: 60px;
+  padding-top: 20px;
+}
