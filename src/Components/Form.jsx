@@ -12,12 +12,14 @@ const SearchForm = (props) => {
             name="city"
             autoComplete="off"
             value={props.val}
-            onChange={props.change}
+            onChange={props.onChange}
             placeholder={props.text}
           />
         </div>
         <div>
-          <button className="search">Get Weather</button>
+          <button className="search" type="submit">
+            Get Weather
+          </button>
         </div>
       </form>
     </div>

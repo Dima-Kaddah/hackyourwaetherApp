@@ -1,0 +1,28 @@
+.WeatherDetails {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 30px;
+  width: 100%;
+  height: 500px;
+  margin: auto;
+  margin-top: 10px;
+  box-shadow: inset 0 0 0 2px #ccc;
+}
+.recharts {
+  text-decoration: none;
+}
+.recharts:active {
+  color: rgb(103, 103, 152);
+}
+.backBtn {
+  padding: 8px;
+  margin-top: -15px;
+}
+.pageContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}

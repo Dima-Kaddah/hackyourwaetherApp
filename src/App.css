@@ -1,12 +1,13 @@
 * {
   box-sizing: border-box;
 }
+body {
+  background-color: #282c34;
+}
 
 .App {
   text-align: center;
-  background-color: #282c34;
   color: white;
-  height: 100vh;
 }
 
 .App-logo {

@@ -1,25 +1,28 @@
 import React from 'react';
+import DeleteBtn from './DeleteBtn';
 import './Card.style.css';
+import { Link } from 'react-router-dom';
 
-const WeatherCard = (props) => {
-  return (
-    <div className="container">
-      <div className="error">{props.error ? error() : null}</div>
-      <div className="card">
-        {props.WBackground ? (
-          <img src={props.WBackground} alt={'weatherApp backgrounds'} />
-        ) : null}
-        <h2>{props.city}</h2>
-        <i className={`wi ${props.WIcons} bigFont`}></i>
-        {props.temp ? (
-          <h2 className="temp"> {Celsius(props.temp)}&deg;</h2>
-        ) : null}
-        {minmaxTemp(Celsius(props.temp_min), Celsius(props.temp_max))}
-        {discrMain(props.main, props.discription)}
-        {location(props.lon, props.lat)}
+const WeatherCard = ({ cityInfo, cityDelete, thereEroror }) => {
+  return cityInfo.map((city, index) => {
+    return (
+      <div className="container" key={index}>
+        <DeleteBtn handleDelete={cityDelete} city={city} />
+        <div className="error">{thereEroror ? error() : null}</div>
+        <div className="card">
+          <Link to={'/' + city.id} className="recharts">
+            <h2>{city.name}</h2>
+          </Link>
+          {city.main.temp ? (
+            <h2 className="temp">{Celsius(city.main.temp)}&deg;</h2>
+          ) : null}
+          {minmaxTemp(Celsius(city.main.temp_min), Celsius(city.main.temp_max))}
+          {discrMain(city.weather[0].main, city.weather[0].description)}
+          {location(city.coord.lon, city.coord.lat)}
+        </div>
       </div>
-    </div>
-  );
+    );
+  });
 };
 
 function minmaxTemp(min, max) {
@@ -66,4 +69,5 @@ function error() {
     </div>
   );
 }
+
 export default WeatherCard;

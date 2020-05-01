@@ -11,8 +11,10 @@
 }
 
 input,
-button {
+.search {
   height: 40px;
+  background-color: seashell;
+  border: 2px solid black;
 }
 
 input {
@@ -37,4 +39,18 @@ button:focus {
 button:active {
   color: azure;
   background-color: rgb(103, 103, 152);
+}
+.deleteBtn {
+  border: 2px solid black;
+  border-radius: 50%;
+  font-size: 30px;
+  background-color: seashell;
+  padding: 5px;
+}
+.deletebtnParent {
+  padding: 2px;
+  margin: 10px;
+  position: relative;
+  width: 400px;
+  text-align: right;
 }
