@@ -24,11 +24,6 @@ h3 {
   flex-wrap: nowrap;
   justify-content: space-around;
 }
-
-.err {
-  display: block;
-  background-color: brown;
-  width: 400px;
-  height: 60px;
-  padding-top: 20px;
+.recharts {
+  color: rgb(166, 191, 255);
 }
